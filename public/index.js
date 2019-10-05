@@ -49,6 +49,8 @@ document.querySelector('.how-to-btn').addEventListener('click', e => {
 */
 if(localStorage.getItem('token') != null){  
   
+  // Clear userText from local storage upon successful login
+  localStorage.setItem('userText') = null;
   logout.style.display = 'block';
   log_btn.setAttribute('href', '#');
   log_btn.innerHTML = 'Add task';
@@ -85,3 +87,8 @@ if(localStorage.getItem('token') != null){
   })
   
 }
+
+function setUserText(userText) {
+  localStorage.setItem('userText', userText.value);
+}
+

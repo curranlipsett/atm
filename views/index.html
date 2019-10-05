@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
   <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
   <link rel="stylesheet" href="/index.css">
+  <script src="../public/index.js"></script>
 </head>
 <body>
   <div class="container">
@@ -26,8 +27,16 @@
     <div class="row">
       <div class="column">
         <form onsubmit="return false">
-          <input type="text" class="task-input" placeholder="Write something you did today.">
-          <a href="https://api.getmakerlog.com/oauth/authorize/?client_id=dFcvPBJSbaeKINjtADyT4sPznWVXO0fsEYk0FUq2&scope=tasks:write&response_type=token" class="add-btn button">Sign in with Makerlog</a>
+          <input type="text" id="userText" class="task-input">
+          <script>
+              var placeholderText = "Write something you did today."
+              if (localStorage.getItem('userText')) {
+                placeholderText = localStorage.getItem('userText');
+              }
+  
+              document.getElementById('userText').placeholder = placeholderText;
+            </script>
+          <a href="https://api.getmakerlog.com/oauth/authorize/?client_id=dFcvPBJSbaeKINjtADyT4sPznWVXO0fsEYk0FUq2&scope=tasks:write&response_type=token" class="add-btn button" onclick="setUserText(userText)">Sign in with Makerlog</a>
         </form>
         <p class="text-center">
           With ❤ <a href="https://twitter.com/fredddieq" target="_blank">@fredddieq</a> for <a href="https://getmakerlog.com/?ref=FredoGonzalezR">Makerlog</a>
