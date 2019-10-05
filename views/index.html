@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add to Makerlog - Easily add your tasks to Makerlog</title>
+  <meta name="description" content="Easily add your tasks to Makerlog">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="https://cdn.glitch.com/8cb79e7d-c6ac-4a4c-8325-9aac9660debc%2FxcB9OFdl_400x400.jpg?1554013046390">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="column column-75">
+        <h3 class="logo">
+          Add to Makerlog
+        </h3>
+      </div>
+      <div class="column clearfix">
+        <a href="#" class="logout-btn float-right">Log out</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <form onsubmit="return false">
+          <input type="text" class="task-input" placeholder="Write something you did today.">
+          <a href="https://api.getmakerlog.com/oauth/authorize/?client_id=dFcvPBJSbaeKINjtADyT4sPznWVXO0fsEYk0FUq2&scope=tasks:write&response_type=token" class="add-btn button">Sign in with Makerlog</a>
+        </form>
+        <p class="text-center">
+          With ❤ <a href="https://twitter.com/fredddieq" target="_blank">@fredddieq</a> for <a href="https://getmakerlog.com/?ref=FredoGonzalezR">Makerlog</a>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column text-center">
+        <a href="#" class="button button-clear how-to-btn">How to use?</a>
+      </div>
+    </div>
+    <div class="row how-to">
+      <div class="column">
+        <p>
+          <strong>Add to Makerlog</strong> let's you easily add a button to log tasks on Makerlog from your website. Think of it like a Tweet button but for Makerlog.
+        </p>
+        <p>
+          It can be used to log any task to Makerlog or as an easy, fast and no-code required implementation for Makerlog.
+        </p>
+        <h4>
+          Add it to your website
+        </h4>
+        <p>
+          It's very easy to add a button for your website, currently you have two options for buttons.
+        </p>
+        <p>
+          First create a class <code>.atm-btn</code> in your CSS and apply the suggested styles.
+        </p>
+        <pre><code>.atm-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #3BC089; /* Makerlog brand color */
+  color: #FFFFFF;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}</code></pre>
+        <p>
+          <strong>Add empty task button.</strong> It displays the input above to let the user type in any text he/she wants.
+          <br>To do so simply create an anchor element in your website and point it to this page.
+        </p>
+        <pre><code>&lt;a href="https://atm.glitch.me" class="atm-btn" target="_blank"&gt;Add Task&lt;/a&gt;</code></pre>
+        <p>
+          Try it <a href="https://atm.glitch.me" class="atm-btn" target="_blank">Add Task</a>
+        </p>
+        <p>
+          <strong>Add prefilled task button.</strong> It prefills the input above with your desired text, for example: "Added my first task with #AddToMakerlog".
+        </p>
+        <p>
+          To prefill a task input just append <code>?task={edit-text}</code> at the end of the URL. <code>{edit-text}</code> must be encoded in the URL.
+          <br>*Please note that users are free to modify the text using the input above.
+        </p>
+        <pre><code>&lt;a href="https://atm.glitch.me/?task=Added%20my%20first%20task%20with%20%23AddToMakerlog" class="atm-btn" target="_blank"&gt;Add Task&lt;/a&gt;</code></pre>
+        <p>
+          Try it <a href="https://atm.glitch.me/?task=Added%20my%20first%20task%20with%20%23AddToMakerlog" class="atm-btn" target="_blank">Add Task</a>
+        </p>
+        <h4>
+          No-code option
+        </h4>
+        <p>
+          If you don't want to use anchors or any piece of code, just create a link to the following URLs.
+        </p>
+        <pre><code>https://atm.glitch.me (empty task input).
+https://atm.glitch.me/?task=Desired text (prefilled task input).</code></pre>
+        <p>
+          Psst! Here's a PNG button: (300x60pixels)
+        </p>
+        <img src="https://cdn.glitch.com/8cb79e7d-c6ac-4a4c-8325-9aac9660debc%2FAdd%20to%20Makerlog.png?1554595638660" alt="Add to Makerlog" width="170">
+        <h4>
+          Support me
+        </h4>
+        <p>
+          I made this just for fun and because I liked Makerlog, but if you want to help me build more interesting tools like this one you can buy me a coffee.
+        </p>
+        <a href="https://gum.co/FredoGonzalezR" target="_blank" class="button">Donate</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/index.js"></script>
+</body>
+</html>
